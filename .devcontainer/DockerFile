@@ -1,0 +1,17 @@
+FROM mcr.microsoft.com/vscode/devcontainers/python:3.12-bookworm
+
+RUN apt-get update && \
+    apt-get -y upgrade && \
+    apt-get -y install \
+      git \
+      curl \
+      zip \
+      unzip \
+      python3-pip
+
+RUN pip3 install poetry
+
+COPY .devcontainer/zshrc /tmp
+RUN cat /tmp/zshrc >> "/home/${USERNAME}/.zshrc"
+RUN rm /tmp/zshrc
+USER ${USERNAME}

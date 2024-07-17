@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "default-python-project"
+version = "0.1.0"
+description = "default python project template devcontainer"
+authors = ["Jim Alcock <reachout@jimalcock.dev>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.5.2"
+
+[tool.ruff.lint]
+select = ["ALL"]
+
+[tool.ruff]
+line-length = 79
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
