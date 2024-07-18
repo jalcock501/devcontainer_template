@@ -19,7 +19,8 @@
                 "ms-vscode.makefile-tools",
                 "njpwerner.autodocstring",
                 "wayou.vscode-todo-highlight",
-                "tamasfe.even-better-toml"
+                "tamasfe.even-better-toml",
+                "GitHub.copilot"
             ]
         }
     },
