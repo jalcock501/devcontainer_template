@@ -1,5 +1,6 @@
 FROM mcr.microsoft.com/vscode/devcontainers/python:3.12-bookworm
 
+# install linux dependenices
 RUN apt-get update && \
     apt-get -y upgrade && \
     apt-get -y install \
@@ -7,11 +8,19 @@ RUN apt-get update && \
       curl \
       zip \
       unzip \
-      python3-pip
+      python3-pip \
+      make
 
-RUN pip3 install poetry
+# install pip dependenices
+RUN pip3 install poetry \
+                 pre-commit
 
+# Copy zshrc (zsh not implemented yet...)
 COPY .devcontainer/zshrc /tmp
 RUN cat /tmp/zshrc >> "/home/${USERNAME}/.zshrc"
 RUN rm /tmp/zshrc
 USER ${USERNAME}
+
+
+# Set the default working directory
+WORKDIR /workspace/${USERNAME}

@@ -5,7 +5,7 @@
         "context": "..",
         "args": {}
     },
-    "postCreateCommand": "./.post_create.sh",
+    "postCreateCommand": "./.devcontainer/post_create.sh",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -18,10 +18,15 @@
                 "github.vscode-pull-request-github",
                 "ms-vscode.makefile-tools",
                 "njpwerner.autodocstring",
-                "wayou.vscode-todo-highlight"
+                "wayou.vscode-todo-highlight",
+                "tamasfe.even-better-toml"
             ]
         }
     },
+    "mounts": [
+           "source=${env:HOME}${env:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind",
+           "source=${env:HOME}${env:USERPROFILE}/.gitconfig,target=/home/vscode/.gitconfig,type=bind"
+    ],
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },

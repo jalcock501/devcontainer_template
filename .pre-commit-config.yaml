@@ -1,0 +1,10 @@
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.16.1
+    hooks:
+      - id: gitleaks
+        args: ["--config", .config/.gitleaks.toml]
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.5.2  # Use the latest version of ruff-pre-commit
+    hooks:
+      - id: ruff

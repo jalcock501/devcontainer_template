@@ -16,5 +16,7 @@ class Greeting:
 
 
 if __name__ == "__main__":
+
     my_greet = Greeting()
     print(my_greet.greet())
+
