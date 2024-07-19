@@ -20,7 +20,8 @@
                 "njpwerner.autodocstring",
                 "wayou.vscode-todo-highlight",
                 "tamasfe.even-better-toml",
-                "GitHub.copilot"
+                "GitHub.copilot",
+                "MS-vsliveshare.vsliveshare"
             ]
         }
     },
