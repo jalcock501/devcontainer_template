@@ -2,6 +2,8 @@
 
 import getpass
 
+from utils.logger import logger
+
 
 class Greeting:
     """Template Greeting Class."""
@@ -18,5 +20,6 @@ class Greeting:
 if __name__ == "__main__":
 
     my_greet = Greeting()
+    logger.info(my_greet.greet())
     print(my_greet.greet())
 
